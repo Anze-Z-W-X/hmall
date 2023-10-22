@@ -1,0 +1,29 @@
+13:16:15:590  INFO 15044 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 17.0.2 on LAPTOP-QAMB2AE5 with PID 15044 (D:\java专用\IDEA专用\hmall\item-service\target\classes started by admin in D:\java专用\IDEA专用\hmall)
+13:16:15:593 DEBUG 15044 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+13:16:15:594  INFO 15044 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+13:16:16:947  INFO 15044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+13:16:16:949  INFO 15044 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.36] using APR version [1.7.2].
+13:16:16:949  INFO 15044 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+13:16:16:949  INFO 15044 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:16:16:955  INFO 15044 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1t  7 Feb 2023]
+13:16:16:965  INFO 15044 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+13:16:16:965  INFO 15044 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+13:16:17:084  INFO 15044 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+13:16:17:085  INFO 15044 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1426 ms
+13:16:18:020  INFO 15044 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+13:16:18:112  INFO 15044 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+13:16:18:113  INFO 15044 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+13:16:18:116  INFO 15044 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+13:16:18:145  INFO 15044 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+13:16:18:306  INFO 15044 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 3.325 seconds (JVM running for 4.389)
+13:17:21:230  INFO 15044 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:17:21:230  INFO 15044 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+13:17:21:232  INFO 15044 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+13:17:43:191  INFO 15044 --- [http-nio-8081-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+13:17:43:614  INFO 15044 --- [http-nio-8081-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+13:17:43:622 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) AS total FROM item
+13:17:43:643 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 
+13:17:43:735 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+13:17:43:747 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item ORDER BY update_time DESC LIMIT ?
+13:17:43:748 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 20(Long)
+13:17:43:766 DEBUG 15044 --- [http-nio-8081-exec-5] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20

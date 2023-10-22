@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hm-service" />
+        <module name="item-service" />
         <module name="hm-common" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="-parameters" />
+      <module name="item-service" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,33 +1,24 @@
 package com.hmall.cart.service.impl;
 
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.api.client.ItemClient;
+import com.hmall.api.dto.ItemDTO;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
 import com.hmall.common.utils.UserContext;
 import com.hmall.cart.domain.dto.CartFormDTO;
-import com.hmall.cart.domain.dto.ItemDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
 import com.hmall.cart.mapper.CartMapper;
 import com.hmall.cart.service.ICartService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.annotation.Resource;
-import java.net.URI;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +40,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     private final RestTemplate restTemplate;
 
     private final DiscoveryClient discoveryClient;
+
+    private final ItemClient itemClient;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
@@ -78,7 +71,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
         // 2.查询商品
         //2.1根据服务名称获取服务的实例列表
-        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
+/*        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
         if(CollUtil.isEmpty(instances)){
             return;
         }
@@ -99,7 +92,9 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
             //查询失败,直接结束
             return;
         }
-        List<ItemDTO> items = response.getBody();
+        List<ItemDTO> items = response.getBody();*/
+        //步骤2简化为以下一句,利用OpenFeign来简化http的发送
+        List<ItemDTO> items = itemClient.queryItemByIds(itemIds);
         if (CollUtils.isEmpty(items)) {
             return;
         }

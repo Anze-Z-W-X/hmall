@@ -42,3 +42,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.hmall.cart.controller
+feign:
+  okhttp:
+    enabled: true   #将openfeign的底层默认通过Client实现改为支持连接池的okhttp实现

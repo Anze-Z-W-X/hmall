@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="item-service" />
         <module name="cart-service" />
+        <module name="user-service" />
         <module name="hm-service" />
         <module name="hm-common" />
         <module name="hm-api" />
@@ -22,6 +23,7 @@
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="-parameters" />
       <module name="item-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>

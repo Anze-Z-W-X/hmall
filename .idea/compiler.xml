@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="item-service" />
         <module name="cart-service" />
+        <module name="trade-service" />
+        <module name="hm-common" />
+        <module name="item-service" />
         <module name="user-service" />
         <module name="hm-service" />
-        <module name="hm-common" />
         <module name="hm-api" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="hm-common" options="-parameters" />
       <module name="hm-service" options="-parameters" />
       <module name="item-service" options="-parameters" />
+      <module name="trade-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>

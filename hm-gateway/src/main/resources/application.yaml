@@ -16,6 +16,8 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/addresses/**,/users/**
+    nacos:
+      server-addr: 192.168.164.129
 logging:
   level:
     com.hmall: debug

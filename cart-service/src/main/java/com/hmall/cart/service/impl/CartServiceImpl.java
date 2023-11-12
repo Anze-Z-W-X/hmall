@@ -45,13 +45,31 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
+        // 1.获取登录用户
+        Long userId = UserContext.getUser();
 
+        // 2.判断是否已经存在
+        if (checkItemExists(cartFormDTO.getItemId(), userId)) {
+            // 2.1.存在，则更新数量
+            baseMapper.updateNum(cartFormDTO.getItemId(), userId);
+            return;
+        }
+        // 2.2.不存在，判断是否超过购物车数量
+        checkCartsFull(userId);
+
+        // 3.新增购物车条目
+        // 3.1.转换PO
+        Cart cart = BeanUtils.copyBean(cartFormDTO, Cart.class);
+        // 3.2.保存当前用户
+        cart.setUserId(userId);
+        // 3.3.保存到数据库
+        save(cart);
     }
 
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L/*UserContext.getUser()*/).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }

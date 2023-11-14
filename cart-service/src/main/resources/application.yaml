@@ -6,3 +6,12 @@ hm:
     package: com.hmall.cart.controller
   db:
     database: hm-cart
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true #开启请求方式前缀
+feign:
+  sentinel:
+    enabled: true #开启feign的sentinel

@@ -1,42 +1,42 @@
-10:11:36:371  INFO 17932 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 17.0.2 on LAPTOP-QAMB2AE5 with PID 17932 (D:\java专用\IDEA专用\hmall\pay-service\target\classes started by admin in D:\java专用\IDEA专用\hmall)
-10:11:36:376 DEBUG 17932 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
-10:11:36:377  INFO 17932 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
-10:11:37:920  INFO 17932 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d8b01a-9dca-395a-8a21-45a8fef661c6
-10:11:38:530  INFO 17932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
-10:11:38:531  INFO 17932 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.36] using APR version [1.7.2].
-10:11:38:532  INFO 17932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
-10:11:38:532  INFO 17932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-10:11:38:537  INFO 17932 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1t  7 Feb 2023]
-10:11:38:549  INFO 17932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-10:11:38:550  INFO 17932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-10:11:38:743  INFO 17932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-10:11:38:743  INFO 17932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2307 ms
-10:11:39:092  INFO 17932 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
-10:11:39:168  INFO 17932 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
-10:11:41:654  INFO 17932 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-10:11:42:288  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of b0f8688a-ca8e-4589-ad39-825ea4167da0
-10:11:42:333  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 25 ms to scan 1 urls, producing 3 keys and 6 values 
-10:11:42:365  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 16 ms to scan 1 urls, producing 4 keys and 9 values 
-10:11:42:376  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 3 keys and 10 values 
-10:11:42:379  WARN 17932 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-10:11:42:386  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 5 values 
-10:11:42:402  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 1 keys and 7 values 
-10:11:42:412  INFO 17932 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 2 keys and 8 values 
-10:11:42:414  WARN 17932 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-10:11:42:415  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] RpcClient init label, labels = {module=naming, source=sdk}
-10:11:42:417  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-10:11:42:418  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-10:11:42:418  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-10:11:42:420  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Try to connect to server on start up, server: {serverIp = '192.168.164.129', server main port = 8848}
-10:11:43:661  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Success to connect to server [192.168.164.129:8848] on start up, connectionId = 1699927904483_192.168.164.1_58140
-10:11:43:662  INFO 17932 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Notify connected event to listeners.
-10:11:43:662  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-10:11:43:663  INFO 17932 --- [main] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$990/0x000000080129ecf0
-10:11:43:726  INFO 17932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
-10:11:43:736  INFO 17932 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 10.40.29.18:8086 register finished
-10:11:44:086  INFO 17932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-10:11:44:089  INFO 17932 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-10:11:44:118  INFO 17932 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-10:11:44:227  INFO 17932 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Receive server push request, request = NotifySubscriberRequest, requestId = 6
-10:11:44:231  INFO 17932 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [b0f8688a-ca8e-4589-ad39-825ea4167da0] Ack server push request, request = NotifySubscriberRequest, requestId = 6
-10:11:44:240  INFO 17932 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 9.014 seconds (JVM running for 9.939)
+13:26:54:143  INFO 1064 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 17.0.2 on LAPTOP-QAMB2AE5 with PID 1064 (D:\java专用\IDEA专用\hmall\pay-service\target\classes started by admin in D:\java专用\IDEA专用\hmall)
+13:26:54:154 DEBUG 1064 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+13:26:54:158  INFO 1064 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
+13:27:00:494  INFO 1064 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01d8b01a-9dca-395a-8a21-45a8fef661c6
+13:27:02:989  INFO 1064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+13:27:02:999  INFO 1064 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.36] using APR version [1.7.2].
+13:27:03:000  INFO 1064 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+13:27:03:003  INFO 1064 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:27:03:059  INFO 1064 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1t  7 Feb 2023]
+13:27:03:101  INFO 1064 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+13:27:03:101  INFO 1064 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+13:27:04:311  INFO 1064 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+13:27:04:312  INFO 1064 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9952 ms
+13:27:05:593  INFO 1064 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+13:27:05:847  INFO 1064 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+13:27:10:366  INFO 1064 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+13:27:11:523  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 7931be48-07c2-41fb-8434-b49d7844b2b0
+13:27:11:641  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 67 ms to scan 1 urls, producing 3 keys and 6 values 
+13:27:11:701  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 22 ms to scan 1 urls, producing 4 keys and 9 values 
+13:27:11:714  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 3 keys and 10 values 
+13:27:11:718  WARN 1064 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:27:11:726  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 1 keys and 5 values 
+13:27:11:740  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 11 ms to scan 1 urls, producing 1 keys and 7 values 
+13:27:11:752  INFO 1064 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 2 keys and 8 values 
+13:27:11:756  WARN 1064 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:27:11:757  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] RpcClient init label, labels = {module=naming, source=sdk}
+13:27:11:760  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+13:27:11:760  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+13:27:11:761  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+13:27:11:765  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Try to connect to server on start up, server: {serverIp = '192.168.164.129', server main port = 8848}
+13:27:14:013  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Success to connect to server [192.168.164.129:8848] on start up, connectionId = 1700371634467_192.168.164.1_54864
+13:27:14:014  INFO 1064 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Notify connected event to listeners.
+13:27:14:016  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+13:27:14:018  INFO 1064 --- [main] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$977/0x0000000801275bf0
+13:27:14:146  INFO 1064 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+13:27:14:194  INFO 1064 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 10.70.119.70:8086 register finished
+13:27:14:714  INFO 1064 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Receive server push request, request = NotifySubscriberRequest, requestId = 7
+13:27:14:722  INFO 1064 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [7931be48-07c2-41fb-8434-b49d7844b2b0] Ack server push request, request = NotifySubscriberRequest, requestId = 7
+13:27:15:180  INFO 1064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+13:27:15:185  INFO 1064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+13:27:15:215  INFO 1064 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+13:27:15:315  INFO 1064 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 23.134 seconds (JVM running for 27.147)

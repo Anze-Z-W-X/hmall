@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cart-service
+    name: trade-service
   profiles:
     active: local
   cloud:

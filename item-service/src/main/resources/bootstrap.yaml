@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cart-service
+    name: item-service
   profiles:
     active: local
   cloud:
@@ -12,5 +12,4 @@ spring:
           - data-id: shared-jdbc.yaml # 共享mybatis配置
           - data-id: shared-log.yaml # 共享日志配置
           - data-id: shared-swagger.yaml # 共享日志配置
-          - data-id: shared-feign.yaml # 共享feign okhttp配置
           - data-id: shared-seata.yaml # 共享feign okhttp配置

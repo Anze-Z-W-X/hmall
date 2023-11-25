@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: trade-service
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      server-addr: 192.168.164.129
+      config:
+        file-extension: yaml #文件后置名
+        shared-configs: #共享配置
+          - data-id: shared-jdbc.yaml # 共享mybatis配置
+          - data-id: shared-log.yaml # 共享日志配置
+          - data-id: shared-swagger.yaml # 共享日志配置
+          - data-id: shared-feign.yaml # 共享feign okhttp配置
+          - data-id: shared-seata.yaml # 共享feign okhttp配置
